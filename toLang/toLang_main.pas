@@ -92,7 +92,6 @@ var
   Messages: TStringList;
   key: integer;
 begin
-  writeln(self.ToString, '; ', fn);
   if not self.created then
     exit(False);
   if not FileExists(fn) then
@@ -130,6 +129,7 @@ begin
   end
   else
   begin
+    target:=SetDirSeparators(target);
     if not self.fromFile(target + '.ini') then
       toLang_defaults.createDefaults(self);
   end;

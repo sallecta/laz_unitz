@@ -6,8 +6,8 @@ if [ "$commmitMessage" = "" ]
 then
     commmitMessage='...'
 fi
-echo commit message is "\ $commmitMessage"\
-exit
+echo commit message is \"$commmitMessage\"
+
 git add *
 git commit --message=$commmitMessage
 git push

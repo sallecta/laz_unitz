@@ -9,5 +9,6 @@ fi
 echo commit message is \"$commmitMessage\"
 
 git add *
+git status
 git commit --message=$commmitMessage
 git push

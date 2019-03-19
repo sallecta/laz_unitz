@@ -9,7 +9,7 @@ uses
   Interfaces,
   Forms,
   gvars,
-  form_Main;
+  form_Main, toLang;
 
 var
   f_main: Tform_main;

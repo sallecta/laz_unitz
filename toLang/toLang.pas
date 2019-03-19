@@ -1,4 +1,4 @@
-unit toLang_main;
+unit toLang;
 
 {$mode objfpc}
 

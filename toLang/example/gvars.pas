@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils,
-  toLang_main;
+  toLang;
 
 type
   tlang = TtoLang; //get toLang object avialable in gvars

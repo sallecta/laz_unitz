@@ -8,7 +8,7 @@ procedure createDefaults(objinst: TObject);
 
 implementation
 
-uses toLang_main;
+uses toLang;
 
 procedure createDefaults(objinst: TObject);
 begin

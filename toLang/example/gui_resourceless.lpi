@@ -108,13 +108,13 @@
         <UnitName Value="form_Main"/>
       </Unit1>
       <Unit2>
-        <Filename Value="gvars.pas"/>
+        <Filename Value="glob.pas"/>
         <IsPartOfProject Value="True"/>
       </Unit2>
       <Unit3>
-        <Filename Value="../toLang.pas"/>
+        <Filename Value="../utolang.pas"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="toLang_main"/>
+        <UnitName Value="uToLang"/>
       </Unit3>
     </Units>
   </ProjectOptions>

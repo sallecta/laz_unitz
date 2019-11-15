@@ -5,7 +5,7 @@ unit form_Main;
 interface
 
 uses Interfaces, Forms, StdCtrls, Classes, SysUtils, FileUtil,
-  gvars, toLang_main;
+  glob;
 
 type
   Tform_main = class(TForm)

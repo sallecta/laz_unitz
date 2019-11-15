@@ -8,8 +8,8 @@ program gui_resourceless;
 uses
   Interfaces,
   Forms,
-  gvars,
-  form_Main, toLang;
+  glob,
+  form_Main, uToLang;
 
 var
   f_main: Tform_main;
@@ -18,12 +18,23 @@ begin
 
   RequireDerivedFormResource := False;
 
-  gvars.toLangInst1 := tlang.Create();//test defaults
-  gvars.toLangInst2 := tlang.Create('lang/Russian');// test loading from ini file
+  //test defaults
+  glob.toLangInst1 := tToLang.Create();
+  // test loading from ini file
+  glob.toLangInst2 := tToLang.Create('lang/Russian');
+  //test defaults with instance name
+  glob.toLangInstWithName := tToLang.Create('','glob.toLangInstWithName');
   writeln('toLangInst1.Get("AppName"): ', toLangInst1.Get('AppName'));
   writeln('toLangInst2.Get("AppName"): ', toLangInst2.Get('AppName'));
   writeln('toLangInst1.Get("Close"): ', toLangInst1.Get('Close'));
   writeln('toLangInst2.Get("Close"): ', toLangInst2.Get('Close'));
+  //test hinting missing keys
+  toLangInst1.logMissing:=true;
+  toLangInst1.Get('missingKey');
+  toLangInst2.logMissing:=true;
+  toLangInst2.Get('missingKey2');
+  toLangInstWithName.logMissing:=true;
+  toLangInstWithName.Get('missingKey3');
 
 
 

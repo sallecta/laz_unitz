@@ -8,12 +8,12 @@ procedure createDefaults(objinst: TObject);
 
 implementation
 
-uses toLang;
+uses uToLang;
 
 procedure createDefaults(objinst: TObject);
 begin
-  TtoLang(objinst).Add('AppName', 'tolangAppName');
-  TtoLang(objinst).Add('Close', '');
+  tuToLang(objinst).Add('AppName', 'tolangAppName');
+  tuToLang(objinst).Add('Close', '');
 end;
 
 end.
